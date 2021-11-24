@@ -1,0 +1,4 @@
+*hacer git pull origin main
+*hacer git add .
+*hacer git commit -m "mensaje"
+*hacer git push origin <rama>

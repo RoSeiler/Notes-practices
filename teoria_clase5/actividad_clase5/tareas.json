@@ -1,0 +1,14 @@
+[
+{
+"titulo": "Estudiar JS",
+"estado": "en progreso"
+},
+{
+"titulo": "Repaso de los videos",
+"estado": "pendiente"  
+},
+{
+    "titulo": "Hacer actividad física",
+    "estado": "terminada"     
+    }
+] 

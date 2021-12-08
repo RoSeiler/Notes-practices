@@ -1,0 +1,224 @@
+@import url(normalize.css);
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");
+
+
+
+* {
+    box-sizing: border-box; 
+    font-family: "roboto",sans-serif;
+}
+
+
+
+
+body {
+	
+	background-color: #f2f2f2;
+    
+}
+ul{
+    list-style: none;
+}
+
+.barra-busqueda{
+    display: flex;
+    width: 30px;
+    padding: 20px;
+    }
+
+    ::placeholder {
+        color: grey;
+    }
+    
+.main-header {
+    background-color: #EAC926;
+    padding: 20px;
+}
+
+.logo {
+    width: 200px;
+}
+
+h3{
+    font-size: 24px;
+}
+
+.copy-header {
+    font-weight: 400;
+    text-align: center;
+}
+
+.texto-azul {
+    color: #03264C;
+}
+
+.main-header-navbar {
+    display: none;
+    /*oculto la barra para la version mobile*/
+}
+
+.main-header-navbar ul {
+    list-style: none;
+    margin: 0%;
+    padding: 0%;
+    font-size: 24px;
+}
+
+.main-header-navbar a {
+    /*la a me permite aplicarle estilo a cualquier elemento adentro de cualquiera de las 2 navbar*/
+    text-decoration: none;
+    color: rgb(27, 26, 26);
+    display: inline-block;
+    /*dado que todas las etiquetas a son elementos de linea y no quiero que sean de linea. Asi les voy a poder pner un poco de relleno:*/
+    padding: 3px 0;
+    font-size: 17px;
+}
+
+.burger-menu {
+    background-color: #1259c3;
+    color: #ffff;
+    display: block;
+    /*lo quiero tratar como bloque*/
+    font-size: 20px;
+    max-width: 50px;
+    padding: 15px 0;
+    /*arriba y abajo 15, a los costados 0 porque ya tengo definido el ancho*/
+    border-radius: 8px;
+    text-align: center;
+    font-size: 22px;
+    margin: auto;
+    /*comoe specifique que sea un elemento de bloque, con margin auto ya lo alinea*/
+}
+
+.tamaño-precios {
+    font-size: 18px;
+}
+
+.tamaño-descuentos {
+    font-size: 16px;
+}
+
+.tamaño-descripcion {
+    font-size: 16px;
+}
+
+.main-footer  {
+    font-size: 12px;
+    color: #666;
+    text-align: center;
+    
+
+}
+
+ul{
+    list-style: none;
+}
+.credit-icon, .gift-icon, .shield-icon{
+    align-items: center;
+    size: 20em;
+    margin-bottom: 10px;
+    color: #1259c3;
+}
+
+.pay-phrase, .shipping-phrase, .security-phrase{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.create-form{
+    padding: 20px 15px ;
+}
+
+
+
+
+
+
+
+
+
+@media (min-width: 768px) {
+    /*desde 768 px se empiezan a implementar los cambios, contemplamos tablets tmb*/
+    .main-header-top-bar {
+
+        display: flex;
+        /* --para hacer visible un elemento--le indico que vamos a trabajar con flexbox, con flexbox trabajo sobre el contenedor y no sobre los elementos*/
+        justify-content: space-between;
+        /*entiende que hay varios elementos y que el espacio entre ellos debe ser homogeneo*/
+    }
+
+    .copy-header {
+
+        max-width: 350px;
+        /*para alinearlo*/
+        text-align: right;
+    }
+
+    .burger-menu {
+
+        display: none;
+        /*para que no se muestre la hamburguesita ene sta medida*/
+    }
+
+    .main-header-navbar {
+
+        display: flex;
+        /*la navbar contiene muchos elementos*/
+        justify-content: space-between;
+        /*para que nso queden los elementos separados por un espacio */
+    }
+
+    .main-header-navbar ul {
+        /*de la main navbar los elementos ul van a tener tmb display flex*/
+
+        display: flex;
+    }
+
+    .main-header-navbar li {
+        /*de la main navbar los elementos ul van a tener tmb display flex*/
+        margin: 0 5px;
+    }
+}
+
+@media (min-width:1200px){   /*para limitar que los contenedores (los que contienen la barra de navegacion , el logo..) no aumenten*/
+/*entonces si como min el viewport está en 1200 px se le aplican las sgtes caract.a los elementos*/
+.main-header-top-bar, .main-header-navbar{
+
+    max-width: 1200px; /*el max de ancho que los elementos van a alcanzar*/
+    margin: auto; /*para centrar los elementos DE BLOQUE*/
+}
+
+.main-header-navbar {
+
+    margin-top: 40px;   
+ }
+
+ .main-header-top-bar {
+
+    align-items: center;
+ }
+
+.main-header-navbar li {
+
+    margin: 0 10px;
+}
+
+.main-header-navbar a {
+
+   font-size: 19px;
+}
+
+.logo{
+
+    width: 250px;
+}
+
+.copy-header {
+
+    margin: 0px;
+    max-width: none; /*no va a tener ningun limitante para esta resolución*/
+    font-size: 22px;
+    font-weight: 400;
+}
+}
